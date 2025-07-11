@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Drive'inchi - Car Customizer</title>
+  <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-firestore-compat.js"></script>
+</head>
+<body>
+  <h2>Welcome to Drive'inchi</h2>
+  <p>Select your car model and customize it.</p>
+  <label>Car Model:
+    <select id="model">
+      <option value="Corolla">Toyota Corolla</option>
+      <option value="Civic">Honda Civic</option>
+      <option value="Mazda3">Mazda 3</option>
+    </select>
+  </label><br>
+
+  <label>Color:
+    <input type="color" id="color" value="#ff0000">
+  </label><br>
+
+  <label>Wheel Style:
+    <select id="wheels">
+      <option value="Sport">Sport</option>
+      <option value="Classic">Classic</option>
+    </select>
+  </label><br>
+
+  <label>Headlight Type:
+    <select id="lights">
+      <option value="Oval">Oval</option>
+      <option value="Square">Square</option>
+    </select>
+  </label><br>
+
+  <button onclick="saveConfig()">Save Customization</button>
+  <button onclick="loadConfig()">Load by ID</button>
+
+  <div id="output" style="margin-top:20px;"></div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
